@@ -1,0 +1,41 @@
+{
+  "name": "@[NPM_ACCOUNT_NAME]/[NPM_PACKAGE_NAME]",
+  "version": "0.0.0-semantic-release",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/[GITHUB_ACCOUNT_NAME]/[GITHUB_REPOSITORY_NAME].git"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/",
+    "tag": "latest"
+  },
+  "scripts": {
+    "story:dev": "histoire dev",
+    "story:build": "histoire build",
+    "story:preview": "histoire preview",
+    "test:headless": "vitest",
+    "test:ui": "vitest --ui",
+    "test:coverage": "vitest run --coverage",
+    "package:build": "svelte-package"
+  },
+  "devDependencies": {
+    "@histoire/plugin-svelte": "^0.12.4",
+    "@sveltejs/package": "^1.0.2",
+    "@sveltejs/vite-plugin-svelte": "^2.0.2",
+    "@tsconfig/svelte": "^3.0.0",
+    "@vitest/ui": "^0.28.5",
+    "histoire": "^0.12.4",
+    "jsdom": "^21.1.0",
+    "lightningcss": "^1.18.0",
+    "postcss": "^8.4.21",
+    "svelte": "^3.54.0",
+    "svelte-check": "^3.0.3",
+    "tslib": "^2.4.1",
+    "typescript": "^4.9.3",
+    "vite": "4.0.4",
+    "vite-plugin-lightningcss": "^0.0.3",
+    "vitest": "^0.28.4"
+  }
+}

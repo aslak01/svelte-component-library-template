@@ -1,0 +1,66 @@
+name: 'Publish package to NPM'
+
+on:
+  push:
+    branches: [master]
+
+jobs:
+  run-tests:
+    runs-on: 'ubuntu-latest'
+    steps:
+      - uses: 'actions/checkout@v3'
+
+      - uses: 'pnpm/action-setup@v2'
+        with:
+          version: 7
+
+      - name: 'Use Node.js 18'
+        uses: 'actions/setup-node@v3'
+        with:
+          node-version: '18.14.1'
+          cache: 'pnpm'
+
+      - name: 'Install packages'
+        run: 'pnpm install'
+
+      - name: 'Run tests'
+        run: 'pnpm test:headless'
+
+  release:
+    name: 'Release package'
+    needs: 'run-tests'
+    runs-on: 'ubuntu-latest'
+    steps:
+      - name: 'Checkout repository'
+        uses: 'actions/checkout@v3'
+
+      - uses: 'pnpm/action-setup@v2'
+        with:
+          version: 7
+
+      - name: 'Use Node.js 18'
+        uses: 'actions/setup-node@v3'
+        with:
+          node-version: '18.14.1'
+          cache: 'pnpm'
+          registry-url: 'https://registry.npmjs.org/'
+
+      - name: 'Install project-packages'
+        run: 'pnpm install'
+
+      - name: 'Install CI-packages'
+        run: 'pnpm add -D @semantic-release/changelog @semantic-release/git lightningcss-cli'
+
+      - name: 'Prepare package'
+        run: 'pnpm package:build'
+
+      - name: 'CSS pre-processing'
+        run: 'bash convert-css.sh package'
+
+      - run: 'cd package'
+
+      - name: 'Publish package and manage versioning'
+        run: 'pnpm exec semantic-release'
+        env:
+          NODE_AUTH_TOKEN: '${{secrets.NPM_ACCESS_TOKEN}}'
+          GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'

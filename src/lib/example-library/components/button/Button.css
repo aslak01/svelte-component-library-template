@@ -1,0 +1,20 @@
+button, .button {
+    display: grid;
+    place-items: center;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    padding-block: var(--padding-block-3);
+    padding-inline: var(--padding-inline-5);
+    background-color: var(--color-primary);
+    color: var(--color-neutral);
+}
+button:is(:disabled), .button.disabled {
+    opacity: 0.4;
+    pointer-events: none;
+}
+
+a.button {
+    text-decoration: none;
+    width: fit-content;
+}

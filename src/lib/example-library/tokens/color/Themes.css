@@ -1,0 +1,44 @@
+.theme-default {
+    --color-primary: var(--grey-8);
+    --color-neutral: var(--grey-2);
+    --color-accent: var(--blue-6);
+    background-color: var(--color-primary);
+    color: var(--color-neutral);
+    accent-color: var(--color-accent);
+}
+
+.theme-danger {
+    --color-primary: var(--red-9);
+    --color-neutral: var(--red-3);
+    --color-accent: var(--red-5);
+    background-color: var(--color-primary);
+    color: var(--color-neutral);
+    accent-color: var(--color-accent);
+}
+
+.theme-info {
+    --color-primary: var(--blue-9);
+    --color-neutral: var(--blue-2);
+    --color-accent: var(--blue-4);
+    background-color: var(--color-primary);
+    color: var(--color-neutral);
+    accent-color: var(--color-accent);
+}
+
+.theme-success {
+    --color-primary: var(--green-9);
+    --color-neutral: var(--green-3);
+    --color-accent: var(--green-7);
+    background-color: var(--color-primary);
+    color: var(--color-neutral);
+    accent-color: var(--color-accent);
+}
+
+.theme-warning {
+    --color-primary: var(--yellow-5);
+    --color-neutral: var(--yellow-9);
+    --color-accent: var(--yellow-3);
+    background-color: var(--color-primary);
+    color: var(--color-neutral);
+    accent-color: var(--color-accent);
+}

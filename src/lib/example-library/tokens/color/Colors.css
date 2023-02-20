@@ -1,0 +1,51 @@
+:where(html) {
+    --grey-1: oklch(10% 0 0);
+    --grey-2: oklch(20% 0 0);
+    --grey-3: oklch(30% 0 0);
+    --grey-4: oklch(40% 0 0);
+    --grey-5: oklch(50% 0 0);
+    --grey-6: oklch(60% 0 0);
+    --grey-7: oklch(70% 0 0);
+    --grey-8: oklch(80% 0 0);
+    --grey-9: oklch(90% 0 0);
+
+    --blue-1: oklch(10% .15 240);
+    --blue-2: oklch(20% .15 240);
+    --blue-3: oklch(30% .15 240);
+    --blue-4: oklch(40% .15 240);
+    --blue-5: oklch(50% .15 240);
+    --blue-6: oklch(60% .15 240);
+    --blue-7: oklch(70% .15 240);
+    --blue-8: oklch(80% .15 240);
+    --blue-9: oklch(90% .15 240);
+
+    --green-1: oklch(10% .17 143);
+    --green-2: oklch(20% .17 143);
+    --green-3: oklch(30% .17 143);
+    --green-4: oklch(40% .17 143);
+    --green-5: oklch(50% .17 143);
+    --green-6: oklch(60% .17 143);
+    --green-7: oklch(70% .17 143);
+    --green-8: oklch(80% .17 143);
+    --green-9: oklch(90% .17 143);
+
+    --red-1: oklch(10% .16 25);
+    --red-2: oklch(20% .16 25);
+    --red-3: oklch(30% .16 25);
+    --red-4: oklch(40% .16 25);
+    --red-5: oklch(50% .16 25);
+    --red-6: oklch(60% .16 25);
+    --red-7: oklch(70% .16 25);
+    --red-8: oklch(80% .16 25);
+    --red-9: oklch(90% .16 25);
+
+    --yellow-1: oklch(10% .10 100);
+    --yellow-2: oklch(20% .10 100);
+    --yellow-3: oklch(30% .10 100);
+    --yellow-4: oklch(40% .10 100);
+    --yellow-5: oklch(50% .10 100);
+    --yellow-6: oklch(60% .10 100);
+    --yellow-7: oklch(70% .10 100);
+    --yellow-8: oklch(80% .10 100);
+    --yellow-9: oklch(90% .10 100);
+}

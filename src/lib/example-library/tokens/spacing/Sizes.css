@@ -1,0 +1,21 @@
+:where(html) {
+    --size-inline-0: 0;
+    --size-inline-1: 0.125rem;
+    --size-inline-2: 0.25rem;
+    --size-inline-3: 0.5rem;
+    --size-inline-4: 1rem;
+    --size-inline-5: 1.5rem;
+    --size-inline-6: 2rem;
+    --size-inline-7: 5rem;
+    --size-inline-8: 10rem;
+
+    --size-block-0: 0;
+    --size-block-1: 2px;
+    --size-block-2: 4px;
+    --size-block-3: 8px;
+    --size-block-4: 16px;
+    --size-block-5: 24px;
+    --size-block-6: 32px;
+    --size-block-7: 80px;
+    --size-block-8: 160px;
+}

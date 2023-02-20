@@ -1,0 +1,4 @@
+:where(html) {
+    --font: "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    --font-monospace: "Consolas", "Lucida Console", "Courier New", monospace;
+}
